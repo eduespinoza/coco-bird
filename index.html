@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="gameCanvas"></canvas>
+      <div id="score"></div>
+      <div id="gameOver" style="display:none;">Game Over! Click to Restart.</div>  
+      <script type="module" src="/src/game.ts"></script>
+    </div>
+
+
+    <div id="marquee-container">
+      <div class="marquee-text" id="marquee-text1">HOLA MUNDO HOLA MUNDO HOLA MUNDO HOLA MUNDO...</div>
+      <div class="marquee-text" id="marquee-text2">HOLA MUNDO HOLA MUNDO HOLA MUNDO HOLA MUNDO...</div>
+    </div>
+  </body>
+
+  <style>
+    #marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  position: absolute;
+  animation: marquee 20s linear infinite;
+}
+
+#marquee-text1 {
+  left: 100%;
+}
+
+#marquee-text2 {
+  animation-delay: 10s; /* Empieza cuando el primero llega a la mitad */
+  left: 200%; /* Coloca el segundo texto más a la derecha */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
+}
+
+  </style>
+
+</html>

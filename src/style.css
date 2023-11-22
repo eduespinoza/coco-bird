@@ -1,0 +1,47 @@
+/* Existing styles */
+body {
+  margin: 0; /* Remove default margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #87CEEB; /* Sky blue background */
+}
+
+/* Updated canvas styles */
+#gameCanvas {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: block; /* Remove inline display */
+  border: none; /* Remove border */
+}
+
+/* Score positioning */
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 60px;
+  color: white;
+}
+
+/* Game over message styling */
+#gameOver {
+  position: absolute;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  bottom: 50%; /* Center vertically */
+  transform: translateY(50%);
+}
+
+/* Additional styles for full-screen canvas */
+html {
+  height: 100%;
+}
+
+canvas:focus {
+  outline: none; /* Remove focus outline */
+}
